@@ -1,0 +1,26 @@
+{
+  "a_galaxy_workflow": "true",
+  "name": "FASTA to Tabular",
+  "steps": {
+    "0": {
+      "tool_id": "upload1",
+      "tool_version": "1.1.0",
+      "type": "data_input",
+      "tool_state": "{\"name\": \"FASTA Input\"}",
+      "inputs": [],
+      "outputs": [],
+      "position": {"left": 10, "top": 10}
+    },
+    "1": {
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_to_tabular/fasta_to_tabular/1.1.0",
+      "tool_version": "1.1.0",
+      "type": "tool",
+      "tool_state": "{\"input1\": {\"__class__\": \"ConnectedValue\"}}",
+      "inputs": [{"input_name": "input1", "source_step": 0, "step_output": "output"}],
+      "outputs": [{"name": "out_file1"}],
+      "position": {"left": 300, "top": 10}
+    }
+  },
+  "tags": [],
+  "format-version": "0.1"
+}
